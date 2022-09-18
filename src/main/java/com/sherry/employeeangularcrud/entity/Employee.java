@@ -14,6 +14,18 @@ public class Employee {
     private String lastName;
     private String email;
 
+    public Employee() {
+    }
+
+    public Employee(long id, String firstName, String lastName, String email) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+    }
+
+
+
     public long getId() {
         return id;
     }
@@ -44,5 +56,15 @@ public class Employee {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                '}';
     }
 }
